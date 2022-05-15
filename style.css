@@ -1,25 +1,44 @@
 * {
-    
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.html {
+    scroll-behavior: smooth;
+    display: block;
 }
 html {
     margin: 0;
     padding: 0;
 }
-@import url("Asset/OktaNeueFont/stylesheet.css");
+@font-face {
+  font-family: 'Okta Neue';
+  src: url('../Asset/OktaNeueFont/OktaNeue-Regular.eot');
+  src: local('Okta Neue'), local('OktaNeue-Regular'),
+      url('OktaNeue-Regular.eot?#iefix') format('embedded-opentype'),
+      url('OktaNeue-Regular.woff2') format('woff2'),
+      url('OktaNeue-Regular.woff') format('woff'),
+      url('OktaNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url("../Asset/OktaNeueFont/stylesheet.css");
 body {
     font-family: 'Okta Neue';
 }
+
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 25px;
+    padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
     font-size: 35px;  
+    
 }
 .flex-item {
     display: flex;
@@ -39,13 +58,17 @@ body {
     align-items: center;
     width: 33.3%;
 }
+
 .headerBlock {
-    display: block;
+    display: inline-block;
     width: 100%;
     position: fixed;
+    z-index: 110;
+    background: rgb(255,255,255);
 }
 .logoHeader {
     width: 100px;
+    transition: 0.5s;
 }
 .buttonHeader {
     font-family: "Okta Neue";
@@ -67,15 +90,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-.firstCont h1 {
-    font-style: italic;
-    font-size: 72px;
-    line-height: 72px;
-    text-align: center;
-}
-.innerFirst {
-    max-width: 1500px;
-}
+
 #forwardBut {
     display: flex;
     justify-content: center;
@@ -92,6 +107,7 @@ body {
     animation: color-change 2s linear infinite;
     cursor: pointer;
 }
+
 
 @keyframes color-change {
     0%,100%{
@@ -113,5 +129,143 @@ body {
     75%{
       border-color:#9400d3;
       color:#9400d3;
+    }
+  }
+  #container {
+    display: inline-block;
+    max-width: 1500px;
+    filter: url(#threshold) blur(0.6px);
+    font-style: italic;
+    font-size: 4.55vw;
+    line-height: 4.55vw;
+    font-weight: 300;
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    display: inline-block;
+    filter: url(#threshold) blur(0.6px);
+    user-select: none;
+    padding-left: 1.55vw;
+    
+}
+
+.secondCont {
+    display: flex;
+    width: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.96);
+    font-style: italic;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 992px) {
+    section {
+      flex-wrap: nowrap;
+    }
+  }
+  .card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background: #CCC;
+    transform: rotateX(0) rotateY(0);
+    transform-style: preserve-3d;
+    transition-duration: 0.1s;
+    transition-timing-function: ease !important;
+  }
+  .card__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://alexandrebuffet.fr/codepen/parallax-cards/blur-overlay.jpg) no-repeat center center;
+    background-size: cover;
+    mix-blend-mode: lighten;
+    opacity: 0.5;
+  }
+
+  .card__image img {
+    max-width: 100%;
+    height: auto;
+    mix-blend-mode: lighten;
+  }
+  .card h2 {
+      font-size: 30px;
+  }
+  .card__heading {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    color: #FFF;
+  }
+  .card__heading .small {
+    display: inline-block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transform: translateZ(15px);
+  }
+  .card__heading h2 {
+    margin: 0;
+    transform: translateZ(30px);
+  }
+  .card.rounded,
+  .card.rounded .card__overlay {
+    border-radius: 145px;
+  }
+  .card.is-out {
+    transform: rotateX(0) rotateY(0) !important;
+    transition-duration: 1s;
+  }
+  #superman {
+    background-color: #3F51B5;
+  }
+  #batman {
+    background-color: #424242;
+  }
+  #wonderwoman {
+    background-color: #E91E63;
+  }
+  #aquaman {
+    background-color: #00BCD4;
+  }
+  #ironman {
+    background-color: #d40012;
+  }
+  
+.secondCont h1 {
+    color: white;
+    font-size: 36px;
+    padding-bottom: 100px;
+}  
+
+.thirdCont {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.thirdCont h1 {
+    font-size: 36px;
+}  
+
+
+@media only screen and (max-width: 600px) {
+    .buttonHeader {
+      display: none;
     }
   }

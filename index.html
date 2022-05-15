@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
 <meta charset="UTF-8">
 <title>DOT</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
 
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 
 <body>
 
@@ -26,15 +26,110 @@
 </div>
 </div>
 <div class="firstCont">
-    <div class="innerFirst">
-    <h1>Маркетинговое агенство, которое поставит точку в ваших вопросах.
-    </h1>
-    </div>
-    <span id="forwardBut"><ion-icon name="arrow-down-outline"></ion-icon></span>
+  <div id="container">
+    Маркетинговое агенство, которое поставит точку в 
+    <span id="text1"></span>
+    <span id="text2"></span>
 </div>
 
+<svg id="filters">
+    <defs>
+        <filter id="threshold">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 190 -50" />
+        </filter>
+    </defs>
+</svg>
+    
+    <div id="forwardBut"><ion-icon name="arrow-down-outline"></ion-icon></div>
+</div>
 
-<script src="script.js"></script>
+<div class="secondCont"> 
+  <h1>Почему cтоит работать с нами</h1>
+  <section>
+    <div id="superman" class="card rounded">
+      <div class="card__overlay">
+      </div>
+      <!-- <div class="card__image">
+        <img src="" alt=""/> 
+      </div> --> 
+      <div class="card__heading">
+        <h2>дизайн.</h2>
+        <span class="small">графический / веб дизайн</span>
+      </div>
+    </div>
+    <div id="batman" class="card rounded">
+      <div class="card__overlay">
+      </div>
+      <div class="card__heading">
+        
+        <h2>смм.</h2>
+        <span class="small">живое введение соц.сетей</span>
+      </div>
+    </div>
+    <div id="wonderwoman" class="card rounded">
+      <div class="card__overlay">
+      </div>
+      <div class="card__heading">
+        
+        <h2>стратегия.</h2>
+        <span class="small">разработка стратегии<br>для вашей компании</span>
+      </div>
+    </div>
+    <div id="aquaman" class="card rounded">
+      <div class="card__overlay">
+      </div>
+      <div class="card__heading">
+        
+        <h2>брендинг.</h2>
+        <span class="small">полное формления бренда под ключ</span>
+      </div>
+    </div>
+    <div id="ironman" class="card rounded">
+      <div class="card__overlay">
+      </div>
+      <div class="card__heading">
+        
+        <h2>продакшн.</h2>
+        <span class="small">креативный фото и видео контент<br> для вашей компании</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="thirdCont"> 
+<h1>Связаться
+  с нами</h1>
+
+  <form action="" method="post">
+   
+    <div class="form-element">
+      <input type="text" name="entry.638761045" placeholder="Имя" required>
+    </div>
+
+    <div class="form-element">
+      <input type="email" name="entry.219743650" placeholder="Е-почта" required>
+    </div>
+
+    <div class="form-element">
+      <input type="tel" name="entry.1572730928" placeholder="Номер телефона" required>
+    </div>
+
+    <div class="form-element">
+      <textarea name="entry.278881246" id="" cols="30" rows="10"  placeholder="..." required></textarea>
+    </div>
+
+    <button class="formbut" id="formbut" type="submit">Отправить</button>
+    <div id="formdone">Ziņa nosūtīta! Drīz jūms atbildēsim!<img width="25" src="asset/party.png"></div>
+
+  </form>
+</div>
+
 </body>
-
+<script src="/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
