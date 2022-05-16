@@ -3,9 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>DOT</title>
+<link  id="favicon" rel="icon" href="../Asset/favicon_1.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -18,36 +21,26 @@
 <ion-icon class="iconHeader" name="menu-outline"></ion-icon>
 </div>
 <div class="flex-item">
+<img class="logoOverlay" src="Asset/Asset5.png"> 
 <img class="logoHeader" src="Asset/logo_black.png" alt="DOT Logo">
 </div>
 <div class="flex-item-two">
-<a class="buttonHeader" href="https://www.w3schools.com">Связаться</a>
+<a class="buttonHeader" href="#forma">Связаться</a>
 </div>
 </div>
 </div>
 <div class="firstCont">
   <div id="container">
-    Маркетинговое агенство, которое поставит точку в 
-    <span id="text1"></span>
-    <span id="text2"></span>
+    Маркетинговое агенство, которое <span>поставит точку в вашей рекламе.</span>
 </div>
 
-<svg id="filters">
-    <defs>
-        <filter id="threshold">
-            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-									0 1 0 0 0
-									0 0 1 0 0
-									0 0 0 190 -50" />
-        </filter>
-    </defs>
-</svg>
+
     
     <div id="forwardBut"><ion-icon name="arrow-down-outline"></ion-icon></div>
 </div>
 
 <div class="secondCont"> 
-  <h1>Почему cтоит работать с нами</h1>
+  <h1>В чём мы сильны</h1>
   <section>
     <div id="superman" class="card rounded">
       <div class="card__overlay">
@@ -100,10 +93,10 @@
 
 </div>
 
-<div class="thirdCont"> 
+<div class="thirdCont" id="forma"> 
 <h1>Связаться
   с нами</h1>
-
+<div class="foorm">
   <form action="" method="post">
    
     <div class="form-element">
@@ -119,14 +112,16 @@
     </div>
 
     <div class="form-element">
-      <textarea name="entry.278881246" id="" cols="30" rows="10"  placeholder="..." required></textarea>
+      <textarea name="entry.278881246" id="" cols="30" rows="10"  placeholder="Cообщение" required></textarea>
     </div>
 
     <button class="formbut" id="formbut" type="submit">Отправить</button>
-    <div id="formdone">Ziņa nosūtīta! Drīz jūms atbildēsim!<img width="25" src="asset/party.png"></div>
+    <div id="formdone">Ziņa nosūtīta! Drīz jūms atbildēsim!</div>
 
   </form>
 </div>
+</div>
+
 
 </body>
 <script src="/js/script.js"></script>

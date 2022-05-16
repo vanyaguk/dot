@@ -24,9 +24,12 @@ html {
   font-style: normal;
 }
 @import url("../Asset/OktaNeueFont/stylesheet.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
 body {
     font-family: 'Okta Neue';
 }
+
 
 .header {
     display: flex;
@@ -38,7 +41,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     font-size: 35px;  
-    
+    z-index: 110;
 }
 .flex-item {
     display: flex;
@@ -69,6 +72,7 @@ body {
 .logoHeader {
     width: 100px;
     transition: 0.5s;
+    z-index: 110;
 }
 .buttonHeader {
     font-family: "Okta Neue";
@@ -83,6 +87,32 @@ body {
     border-radius: 30px;
     text-align: center;
 }
+.logoOverlay {
+  width: 37px;
+  margin-left: 3px;
+  position: absolute;
+  z-index: 120;
+  animation: color-change-logo 7s linear infinite;
+}
+@keyframes color-change-logo {
+  0%,100%{
+    filter: hue-rotate(0deg);
+  }
+
+  25%{
+    filter: hue-rotate(45deg);
+  }
+  
+  50%{
+    filter: hue-rotate(90deg);
+
+  }
+  
+  75%{
+    filter: hue-rotate(180deg);
+  }
+}
+
 .firstCont {
     display: flex;
     height: 100vh;
@@ -133,6 +163,7 @@ body {
   }
   #container {
     display: inline-block;
+    text-align: center;
     max-width: 1500px;
     filter: url(#threshold) blur(0.6px);
     font-style: italic;
@@ -140,7 +171,9 @@ body {
     line-height: 4.55vw;
     font-weight: 300;
 }
-
+#container span:hover {
+  animation: color-change 5s linear infinite;
+}
 #text1,
 #text2 {
     position: absolute;
@@ -190,10 +223,10 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(https://alexandrebuffet.fr/codepen/parallax-cards/blur-overlay.jpg) no-repeat center center;
+    background: url(https://alexandrebuffet.fr/codepen/parallax-cards/blur-overlay.jpg) no-repeat center center, #000000;
     background-size: cover;
-    mix-blend-mode: lighten;
-    opacity: 0.5;
+    mix-blend-mode: darken;
+    opacity: 0.8;
   }
 
   .card__image img {
@@ -223,7 +256,7 @@ section {
     transform: translateZ(30px);
   }
   .card.rounded,
-  .card.rounded .card__overlay {
+  .card.rounded .card__overlay, .card__overlay2 {
     border-radius: 145px;
   }
   .card.is-out {
@@ -231,19 +264,34 @@ section {
     transition-duration: 1s;
   }
   #superman {
-    background-color: #3F51B5;
+    background-image: url("../Asset/markus-spiske-cZ-s645ZBHo-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   }
   #batman {
-    background-color: #424242;
+    background-image: url("../Asset/marten-bjork-FVtG38Cjc_k-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   }
   #wonderwoman {
-    background-color: #E91E63;
+    background-image: url("../Asset/diggity-marketing-s8HyIEe7lF0-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   }
   #aquaman {
-    background-color: #00BCD4;
+    background-image: url("../Asset/balazs-ketyi-LPWl2pEVGKc-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   }
   #ironman {
-    background-color: #d40012;
+    background-image: url("../Asset/kal-visuals-3UcQtXSvA88-unsplash.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
   }
   
 .secondCont h1 {
@@ -253,6 +301,7 @@ section {
 }  
 
 .thirdCont {
+  width: 100%;
     display: flex;
     height: 100vh;
     justify-content: center;
@@ -263,9 +312,105 @@ section {
     font-size: 36px;
 }  
 
+.foorm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+form span {
+  font-size: 20px;
+}
+form {
+  padding-top: 25px;
+  max-width: 614px;
+  min-width: 100px;
+  
+}
+form img {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.form-element span {
+  margin-bottom: 10px;
+  color: #f4dbdb;
+}
+input {
+  height: 50px;
+}
+textarea {
+  height: 200px;
+}
+input, textarea {
+  padding: 25px;
+  padding-bottom: 28px;
+  border: 3px black solid;
+  border-radius: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Okta Neue";
+}
+form button {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 13px;
+  border: 3px black solid;
+  border-radius: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Okta Neue";
+  text-align: center;
+  background: white;
+  text-decoration: none;
+  transition: all .4s;
+  cursor: pointer;
+}
+form button:hover {
+   color: white;
+   background-color: black;
+   border-color: black;
+   transform: scale(1.0);
+}
+form h1 {
+  font-family: 'Playfair Display', serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-size: 4vh;
+}
+form ::placeholder {
+  opacity: 40%;
+}
+
+#formdone {
+  width: 100%;
+  padding: 15px;
+  color: #d9cbc0;
+  border-color: #d9cbc0;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all .4s;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+  display: none;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .buttonHeader {
       display: none;
+      
     }
   }
