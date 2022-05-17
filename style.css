@@ -88,11 +88,20 @@ body {
     text-align: center;
 }
 .logoOverlay {
-  width: 37px;
-  margin-left: 3px;
+  width: 36.5px;
+  margin-left: 2px;
+  position: absolute;
+  z-index: 120;
+  opacity: 0;
+  transition-duration: 1s;
+}
+.logoOverlay:hover {
+  width: 36.5px;
+  margin-left: 2px;
   position: absolute;
   z-index: 120;
   animation: color-change-logo 7s linear infinite;
+  opacity: 0.8;
 }
 @keyframes color-change-logo {
   0%,100%{
