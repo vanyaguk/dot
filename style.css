@@ -14,7 +14,7 @@ html {
 }
 @font-face {
   font-family: 'Okta Neue';
-  src: url('Asset/OktaNeueFont/OktaNeue-Regular.eot');
+  src: url('/OktaNeueFont/OktaNeue-Regular.eot');
   src: local('Okta Neue'), local('OktaNeue-Regular'),
       url('OktaNeue-Regular.eot?#iefix') format('embedded-opentype'),
       url('OktaNeue-Regular.woff2') format('woff2'),
@@ -23,7 +23,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-@import url("Asset/OktaNeueFont/stylesheet.css");
+@import url("/OktaNeueFont/stylesheet.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
 body {
@@ -89,7 +89,7 @@ body {
 }
 .logoOverlay {
   width: 36.5px;
-  margin-left: 2px;
+  margin-left: 3px;
   position: absolute;
   z-index: 120;
   opacity: 0;
@@ -379,6 +379,7 @@ form button {
   text-decoration: none;
   transition: all .4s;
   cursor: pointer;
+  color: black;
 }
 form button:hover {
    color: white;
