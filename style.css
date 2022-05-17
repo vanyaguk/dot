@@ -14,7 +14,7 @@ html {
 }
 @font-face {
   font-family: 'Okta Neue';
-  src: url('../Asset/OktaNeueFont/OktaNeue-Regular.eot');
+  src: url('Asset/OktaNeueFont/OktaNeue-Regular.eot');
   src: local('Okta Neue'), local('OktaNeue-Regular'),
       url('OktaNeue-Regular.eot?#iefix') format('embedded-opentype'),
       url('OktaNeue-Regular.woff2') format('woff2'),
@@ -23,7 +23,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-@import url("../Asset/OktaNeueFont/stylesheet.css");
+@import url("Asset/OktaNeueFont/stylesheet.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
 body {
@@ -273,31 +273,31 @@ section {
     transition-duration: 1s;
   }
   #superman {
-    background-image: url("../Asset/markus-spiske-cZ-s645ZBHo-unsplash.jpg");
+    background-image: url("Asset/markus-spiske-cZ-s645ZBHo-unsplash.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
   }
   #batman {
-    background-image: url("../Asset/marten-bjork-FVtG38Cjc_k-unsplash.jpg");
+    background-image: url("Asset/marten-bjork-FVtG38Cjc_k-unsplash.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
   }
   #wonderwoman {
-    background-image: url("../Asset/diggity-marketing-s8HyIEe7lF0-unsplash.jpg");
+    background-image: url("Asset/diggity-marketing-s8HyIEe7lF0-unsplash.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
   }
   #aquaman {
-    background-image: url("../Asset/balazs-ketyi-LPWl2pEVGKc-unsplash.jpg");
+    background-image: url("Asset/balazs-ketyi-LPWl2pEVGKc-unsplash.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
   }
   #ironman {
-    background-image: url("../Asset/kal-visuals-3UcQtXSvA88-unsplash.jpg");
+    background-image: url("Asset/kal-visuals-3UcQtXSvA88-unsplash.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
