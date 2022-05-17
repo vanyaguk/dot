@@ -14,7 +14,7 @@ html {
 }
 @font-face {
   font-family: 'Okta Neue';
-  src: url('file:///Asset/OktaNeueFont/OktaNeue-Regular.eot');
+  src: url('https://vanyaguk.github.io/dot/Asset/OktaNeueFont/OktaNeue-Regular.eot');
   src: local('Okta Neue'), local('OktaNeue-Regular'),
       url('OktaNeue-Regular.eot?#iefix') format('embedded-opentype'),
       url('OktaNeue-Regular.woff2') format('woff2'),
@@ -23,7 +23,7 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-@import url("file:///Asset/OktaNeueFont/stylesheet.css");
+@import url("https://vanyaguk.github.io/dot/Asset/OktaNeueFont/stylesheet.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap');
 body {
