@@ -18,7 +18,9 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
 }
-
+main {
+  overflow: hidden;
+}
 
 .header {
     display: flex;
@@ -50,7 +52,14 @@ body {
     align-items: center;
     width: 33.3%;
 }
-
+.flex-item-one input {
+  opacity: 0;
+  width: 0px;
+}
+button:active + ul,
+input:checked + ul {
+    display: block;
+}
 .headerBlock {
     display: inline-block;
     width: 100%;
@@ -163,7 +172,6 @@ body {
     display: inline-block;
     text-align: center;
     max-width: 1500px;
-    filter: url(#threshold) blur(0.6px);
     font-style: italic;
     font-size: 4.55vw;
     line-height: 4.55vw;
@@ -345,7 +353,7 @@ input {
 textarea {
   height: 200px;
 }
-input, textarea {
+.foorm input, .foorm textarea {
   padding: 25px;
   padding-bottom: 28px;
   border: 3px black solid;
@@ -404,6 +412,7 @@ form ::placeholder {
   user-select:none;
   display: none;
 }
+
 
 
 

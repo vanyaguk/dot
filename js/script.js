@@ -58,3 +58,5 @@ $('#forwardBut').on('mouseleave', function(e) {
       transform: 'translate3d('+ deltaX * 0.5 +'px, '+ deltaY * 0.5 +'px, 0px)'
     });
   });
+
+ 
