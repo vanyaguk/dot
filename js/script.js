@@ -59,4 +59,22 @@ $('#forwardBut').on('mouseleave', function(e) {
     });
   });
 
- 
+
+  document.addEventListener('mousemove', showImgContent);
+
+  function menushown() {
+      document.getElementById("menu").style.width = "20%";
+      document.getElementById("menuInner").style.opacity = "1";
+      document.getElementById("container").style.paddingLeft = "20%";
+    }
+    function menushown2() {
+      document.getElementById("menu").style.width = "100%";
+      document.getElementById("menuInner").style.opacity = "1";
+    }
+    
+    function menuhide() {
+      document.getElementById("menu").style.width = "0%";
+      document.getElementById("menuInner").style.opacity = "0";
+      document.getElementById("container").style.maxWidth = "100%";
+      document.getElementById("container").style.paddingLeft = "0%";
+    } 

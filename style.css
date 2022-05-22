@@ -412,10 +412,89 @@ form ::placeholder {
   user-select:none;
   display: none;
 }
-
-
-
-
+#menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0%;
+  height: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: -10px;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  overflow: hidden;
+  list-style-type: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#menuInner {
+  opacity: 0;
+  transition: all 1s;
+  list-style-type: none;
+  font-size: 20px;
+  padding-left: 100px;
+}
+#menuHide {
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+#instaInner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#instaInner ion-icon {
+  padding-right: 12px;
+  font-size: 22px;
+}
+#menu a::before, a.active::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  visibility: hidden;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  top: 30px;
+  font-weight: bold;
+}
+#menu a:hover::before, #menu a.active::before {
+  visibility: visible;
+ width: 100%;
+}
+li {
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+#instaInner:hover::before {
+  visibility: hidden;
+  width: 0%;
+}
+.menuIconMob {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .menuIcon {
+    display: none;
+  }
+  .menuIconMob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 @media only screen and (max-width: 600px) {
     .buttonHeader {
       display: none;

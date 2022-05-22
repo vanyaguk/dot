@@ -16,9 +16,21 @@
 </head>
 
 <body>
+
+  <div id="menu">
+   
+    <ul id="menuInner">
+      <ion-icon id="menuHide" onclick="menuhide()" style="font-size: 32px;" name="close-circle-outline"></ion-icon>
+        <li><a>Pricelist</a></li>
+        <li><a>Contact</a></li>
+        <li><a>Team</a></li>
+    </ul>
+</div>
+
 <div class="header">
 <div class="flex-item-one">
-<input><ion-icon class="iconHeader" name="menu-outline" id="trigger"></ion-icon></input>
+  <ion-icon class="menuIcon" onclick="menushown()" style="font-size: 32px;" name="menu-outline"></ion-icon>
+        <ion-icon class="menuIconMob" onclick="menushown2()" style="font-size: 32px;" name="menu-outline"></ion-icon>
 </div>
 <div class="flex-item">
 <img class="logoOverlay" src="Asset/Asset5.png"> 
